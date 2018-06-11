@@ -1,7 +1,7 @@
 const cofirmEmailURL = "https://qh0uqafx50.execute-api.ap-northeast-1.amazonaws.com/dev/confirm-email";
 const userPoolId = "ap-northeast-1_cl74QBXUP";
 const cognitoClientId = "3oiseavjklirvgoce3jvfhn0t0";
-const redirectURI = "https://localhost:8080";
+const redirectURI = "http://localhost:8080";
 
 const getEmailMessage = (userName, confirmationCode) => (`
     Follow this link to finish the registration
