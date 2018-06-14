@@ -1,6 +1,6 @@
 const cofirmEmailURL = "https://qh0uqafx50.execute-api.ap-northeast-1.amazonaws.com/dev/confirm-email";
-const userPoolId = "ap-northeast-1_cl74QBXUP";
-const cognitoClientId = "3oiseavjklirvgoce3jvfhn0t0";
+const userPoolId = "ap-northeast-1_pf2BvmaQs";
+const cognitoClientId = process.env.COGNITO_CLIENT_ID;
 const redirectURI = "http://localhost:8080";
 
 const getEmailMessage = (userName, confirmationCode) => (`
