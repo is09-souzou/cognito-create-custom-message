@@ -1,5 +1,5 @@
 const cofirmEmailURL = "https://qh0uqafx50.execute-api.ap-northeast-1.amazonaws.com/dev/confirm-email";
-const userPoolId = "ap-northeast-1_pf2BvmaQs";
+const userPoolId = process.env.COGNITO_USER_POOL_ID;
 const cognitoClientId = process.env.COGNITO_CLIENT_ID;
 const redirectURI = "http://localhost:8080";
 
