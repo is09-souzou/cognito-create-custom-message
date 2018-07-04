@@ -12,7 +12,7 @@ exports.handler = (event, context, callback) => {
     if(event.userPoolId === userPoolId) {
         if(event.triggerSource === "CustomMessage_SignUp") {
             event.response.emailSubject = "Welcome to Portal! Please verify your Email Adress.";
-            event.response.emailMessage = getEmailMessage(event.request.userAttributes.email, event.request.codeParameter);
+            event.response.emailMessage = getEmailMessage(event.request.usernameParameter, event.request.codeParameter);
         }
     }
     
