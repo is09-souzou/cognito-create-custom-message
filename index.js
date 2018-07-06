@@ -11,7 +11,9 @@ const getEmailMessage = (userName, confirmationCode) => (`
 exports.handler = (event, context, callback) => {
     if(event.userPoolId === userPoolId) {
         if(event.triggerSource === "CustomMessage_SignUp") {
-            console.log(event.request);
+            event.response.emailSubject = "Welcome to Portal! Please verify your Email Adress.";
+            event.response.emailMessage = getEmailMessage(event.userName, event.request.codeParameter);
+        } else if (event.triggerSource === "CustomMessage_UpdateUserAttribute") {
             event.response.emailSubject = "Welcome to Portal! Please verify your Email Adress.";
             event.response.emailMessage = getEmailMessage(event.userName, event.request.codeParameter);
         }
