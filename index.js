@@ -24,7 +24,7 @@ const getJapaneseEmail = (userName, confirmationCode, displayName) => ({
     ようこそポータルへ！メールアドレスの確認をお願いします。<br>
     <br>
     このリンクをたどって登録を完了してください。<br>
-    <a href=${cofirmEmailURL}?client_id=${cognitoClientId}&user_name=${userName}&confirmation_code=${confirmationCode}&redirect_uri=${redirectURI}>Click Here</a>
+    <a href=${cofirmEmailURL}?client_id=${cognitoClientId}&user_name=${userName}&confirmation_code=${confirmationCode}&redirect_uri=${redirectURI}>ここをクリック</a>
 `
 });
 
